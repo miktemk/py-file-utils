@@ -9,7 +9,7 @@ import __main__
 
 
 
-fff = open("mp3_convert_batch.bat", "w")
+fff = open("zz_mp3_convert_batch.bat", "w")
 fff.write("""
 @ECHO OFF
 

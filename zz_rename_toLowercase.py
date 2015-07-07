@@ -1,3 +1,5 @@
+# **MODE OF USE**: Run in a folder
+#
 # Renames all files to lowercase. Works only on one level of the folder
 
 import sys, os, shutil

@@ -1,9 +1,19 @@
+# **MODE OF USE**: Run in a folder
+#
+# Will move files from every folder to this one. Effectively empties
+# the folders and deletes them. The files will be renamed with the prefix
+# of the folder where they came from. This avoids conflicts, unlike `zz_collapse_folders.py`
+#
+# - NOTE: works 1 level only.
+# - NOTE: Configure `PREFIX_SEPARATOR_CHAR` inside this script if you like
+
+
 import sys, os, re, shutil
 
 PREFIX_SEPARATOR_CHAR = "-"
 
 dirname, thisScript = os.path.split(__file__)
-print (dirname)
+#print (dirname)
 dirList = os.listdir(dirname)
 for dname in dirList:
 	if dname == os.path.basename(__file__):

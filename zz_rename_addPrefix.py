@@ -1,4 +1,6 @@
-# apprends _# to each file
+# **MODE OF USE**: Run in a folder
+#
+# Renames all files. Apprends `prefix_` to each filename.
 
 import sys, os, re
 import time, datetime, shutil

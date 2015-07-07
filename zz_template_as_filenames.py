@@ -1,5 +1,6 @@
-#usage: 
-# 1. create a subfolder in the directory with ur files
+# **MODE OF USE**: Drag and drop.
+#
+# 1. create a subfolder in the directory with your files
 # 2. put __template.png in the subfolder + this python script
 # 3. run this python script from the subfolder
 

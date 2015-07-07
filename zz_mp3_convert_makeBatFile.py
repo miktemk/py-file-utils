@@ -1,3 +1,9 @@
+# **MODE OF USE**: Run in a folder (with wavs!)
+#
+# Generates a batch file that converts every single wav in this folder to mp3 using
+# `Lame For Audacity`. Also makes the "convert" directory if it doesn't exist.
+# Feel free to change the path to lame if you dare...
+
 ############ config ############
 OUT_DIRNAME = "convert"
 SRC_EXT = ".wav"

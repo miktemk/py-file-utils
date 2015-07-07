@@ -1,4 +1,10 @@
-# apprends _# to each file
+# **MODE OF USE**: Run in a folder
+#
+# WARNING!!! Will rename all files in the folder where this script is run.
+#
+# Enter prefix. Let's say you entered "newfilename". All the files will be renamed to `newfilename_1.txt`, `newfilename_2.mp3`, ... for all files in the folder, in the order of alphabet, I guess.
+#
+# EXCEPTED: `.exe`, `.dll`, `.py`, `.bat`, folders
 
 import sys, os, re
 import time, datetime, shutil

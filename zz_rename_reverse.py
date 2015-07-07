@@ -1,7 +1,18 @@
-# drag up to N files into me.
-# 2 files: [1,2] => [2,1] (swap)
-# 3 files: [1,2,3] => [3,2,1]
-# 4 files: [1,2,3,4] => [4,3,2,1]
+# **MODE OF USE**: Drag and drop.
+#
+# Quick
+#
+# - drag up to N files into me.
+# - 2 files: `[1,2]` => `[2,1]` (swap)
+# - 3 files: `[1,2,3]` => `[3,2,1]`
+# - 4 files: `[1,2,3,4]` => `[4,3,2,1]`
+#
+# Lengthy
+#
+#  - When you drag 2 files `a.txt` and `b.txt` the files are renamed, their names swapped.
+#  - When you drag `a.txt`, `b.txt`, `c.txt`, `a` is renamed to `c` and `c` to `a`. `b.txt` stays.
+#  - When 4 files are dragged in: a, b, c, d... a is renamed d, b is renamed c...
+#  - 5 files... you get the idea!
 
 import sys, os, re
 import time, datetime, shutil

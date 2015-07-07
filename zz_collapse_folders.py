@@ -1,7 +1,15 @@
+# **MODE OF USE**: Run in a folder
+#
+# Will move files from every folder to this one. Effectively empties
+# the folders and deletes them.
+#
+# - NOTE: works 1 level only.
+# - NOTE: look out for filename conflicts (e.g. `ch1/part1.mp3` & `ch2/part1.mp3`)
+
 import sys, os, re, shutil
 
 dirname, thisScript = os.path.split(__file__)
-print (dirname)
+#print (dirname)
 dirList = os.listdir(dirname)
 for dname in dirList:
 	if dname == os.path.basename(__file__):

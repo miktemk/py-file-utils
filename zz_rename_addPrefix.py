@@ -16,6 +16,6 @@ for fname in listFiles:
 	noext, ext = os.path.splitext(fname)
 	if ext in extsOut:
 		continue
-	destination = prefix + "_" + fname
+	destination = prefix + fname
 	print(fname, destination)
 	os.rename(fname, destination)

@@ -55,7 +55,7 @@ for o, a in opts:
         filenameTarget = a
     elif o in ("-o", "--output"):
         filenameOut = a
-        print ("output file SET!!!!!!!!!!!!")
+        #print ("output file SET!!!!!!!!!!!!")
     else:
         assert False, "unhandled option"
 

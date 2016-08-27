@@ -7,7 +7,7 @@ import time, datetime
 
 # .... match TTS Utility's filename format (for long audiobooks). group(1)
 # .... example: fname = casanova-ru_0001.mp3 => group(1) = casanova-ru
-regexBookName = "(.*)_\d+\.mp3$"
+regexBookName = "(.*?)(_|-)(\d+.*)\.mp3$"
 
 listOfAllBookNames = []
 

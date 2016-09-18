@@ -10,6 +10,10 @@ import getopt
 reSearch = r'(.*)-(\d+-\d+-\d+)(.*)'
 reReplace = r'\2-\1\3'
 
+# .... PENTAX
+# reSearch = r'(.*)_(.*)$'
+# reReplace = r'\2_\1'
+
 listFiles = os.listdir(".")
 extsOut = [".py", ".bat", ".dll", ".exe", ".md"]
 for fname in listFiles:

@@ -7,14 +7,30 @@
 
 import sys, os, shutil
 import getopt, codecs
+import glob
 from os import path
 
 os.path.dirname(os.path.abspath(__file__)) # .... set . to CWD (good practice)
 
+# NOTE: comment/uncomment whichever print lines you need to build your script
+
+# print('#!/bin/sh') # for bash scripts
+
 def gitFolderHere_doWork(folder):
 	# print("Git folder!!!", folder)
 	print("cd %s" % (folder))
-	print("git status")
+	# print("cd %s" % (folder.replace('C:', '/c').replace('\\', '/'))) # for bash scripts
+	# print("git status")
+	# print("git stash list")
+	print("git clean -fdx")
+	# dirList = os.listdir(folder)
+	# if "node_modules" in dirList:
+	# 	print("rm -rf node_modules")
+	# print('>>>>>>>> glob', folder + '\\*.sln')
+	# slnFiles = glob.glob(folder + '\\*.sln')
+	# if len(slnFiles) > 0:
+	# 	print("CsProjNukeBinObj -v .")
+
 
 def isGitRoot(folder):
 	dirList = os.listdir(folder)

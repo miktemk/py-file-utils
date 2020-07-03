@@ -7,7 +7,7 @@
 ############ config ############
 OUT_DIRNAME = "convert"
 SRC_EXT = ".wav"
-BITRATE = "192k"
+BITRATE = "128"
 ################################
 
 import sys, os, shutil
@@ -38,7 +38,10 @@ for fname in dirList:
 		continue
 	fname2 = fname.lower().replace(SRC_EXT, ".mp3")
 	fname2 = OUT_DIRNAME + "/" + fname2
-	fff.write('ffmpeg -i "' + fname + '" -vn -ar 44100 -ac 2 -b:a ' + BITRATE + ' "' + fname2 + '"\n')
+	fff.write('"C:\Program Files (x86)\Lame For Audacity\lame.exe"')
+	if SRC_EXT == "mp3":
+		fff.write(' --mp3input')
+	fff.write(' -b ' + BITRATE + ' "' + fname + '" "' + fname2 + '" \n')
 
 		
 fff.write("""

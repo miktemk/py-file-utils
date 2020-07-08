@@ -12,7 +12,7 @@ def processFolder(pathS):
 		fullPathS = pathS + "/" + fname
 		if not os.path.isdir(fullPathS):
 			fnameFinal = fullPathS.lower()
-			print fnameFinal
+			print (fnameFinal)
 			os.rename(fullPathS, fnameFinal)
 
 processFolder(SRC_ROOT)

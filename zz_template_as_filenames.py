@@ -23,5 +23,5 @@ for fname in dirList:
 		continue
 	fullPath = dirname + "\\" + fname
 	if not os.path.isdir(fullPath):
-		print fname;
+		print (fname);
 		shutil.copyfile(DIR_DEST + "/" + TEMPLATE, DIR_DEST + "/" + fname)

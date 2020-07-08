@@ -7,11 +7,11 @@
 # 2. Will generate `20150809_125758 this is me doodling.txt`, depending on the time and day, of course
 # 3. NOTE: Change the DELIMETER constant as needed
 
-import sys, os
+import sys, os, re
 import shutil
 from datetime import datetime
 
-DELIMETER = ' '
+DELIMETER = ' - '
 
 #DEBUG: sample command line argument for debugging with Sublime+REPL
 #sys.argv = [sys.argv[0], "README.md"]
@@ -22,6 +22,8 @@ if len(sys.argv) <= 1:
 	exit(1)
 
 description = input("WAZDIZ: ")
+description = re.sub('[\\\/:*?"<>|]', '', description) # A filename cannot contain any of the following characters: \ / : * ? " < > | https://regex101.com/r/AA4mot/1
+
 argFname = sys.argv[1]
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 (noext, ext) = os.path.splitext(os.path.basename(argFname))

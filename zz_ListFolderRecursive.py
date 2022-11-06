@@ -9,11 +9,16 @@ import sys, os, shutil
 import getopt, codecs
 from os import path
 
-ignoreList = [".svn-base$",\
+ignoreList = [\
+	"zz_ListFolderRecursive.py", \
+	"zz_fileListingRecursive.txt",\
+	".git",\
+	".svn-base$",\
 	".class$",\
 	".sfk$",\
 	".vf.bak$",\
-	".metadata\.plugins"]
+	".metadata.plugins",\
+	"$RECYCLE.BIN", "System Volume Information"]
 
 os.path.dirname(os.path.abspath(__file__)) # .... set . to CWD (good practice)
 #sys.argv = ["exe", "C:\\Users\\miktemk\\Music\\Abook\\Frai_Bolshaya_telega_[tfile.ru]"] # .... debug tests
@@ -30,7 +35,7 @@ def isInIgnoreLit(fullName):
 	return False
 
 def ListFolder(folder, fOut):
-	dirList = os.listdir(folder)
+	dirList = sorted(os.listdir(folder))
 	for fname in dirList:
 		fullName = path.join(folder, fname)
 		if path.isdir(fullName):
